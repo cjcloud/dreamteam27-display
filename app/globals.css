@@ -1,0 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 24, 24, 24;
+}
+
+/* ---- DreamTeam27 colour theme: neon (single active theme) ----
+   Applied by default via :root; other palettes were removed.
+   To reintroduce switchable themes, add [data-theme="name"] blocks
+   and restore the ThemeSwitcher. */
+:root,
+[data-theme="neon"] {
+  --dt-bg: #0A0A0A;            /* near-black page              */
+  --dt-surface: #334155;      /* slate-grey table / cards     */
+  --dt-surface-2: #1B4D3E;    /* Sherwood-green banner / bands */
+  --dt-primary: #4361EE;      /* buttons / links (blue)       */
+  --dt-primary-contrast: #FFFFFF;
+  --dt-accent: #C7F900;       /* electric-lime highlight      */
+  --dt-content: #F2F2F2;      /* main text                    */
+  --dt-content-muted: #6CABDD;/* sky-blue muted text          */
+  --dt-border: #26262E;
+}
+
+body {
+  color: var(--dt-content);
+  min-height: 100vh;
+  background-color: var(--dt-bg);
+}
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+@keyframes slideAndFlash {
+  0% {
+    transform: translateX(50px);
+    opacity: 1;
+    scale: 1;
+  }
+  40% {
+    transform: translateX(0);
+    opacity: 1;
+    scale: 1;
+  }
+  45% { 
+    opacity: 0.3;
+    scale: 1.2;
+  }
+  50% { 
+    opacity: 1;
+    scale: 1;
+  }
+  55% { 
+    opacity: 0.3;
+    scale: 1.2;
+  }
+  60% { 
+    opacity: 1;
+    scale: 1;
+  }
+  65% { 
+    opacity: 0.3;
+    scale: 1.2;
+  }
+  70%, 100% { 
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.number-animate {
+  display: inline-block;
+  animation: slideAndFlash 2s ease-out forwards;
+}
+
+.slide-delay-1 { animation-delay: 0.1s; }
+.slide-delay-2 { animation-delay: 0.2s; }
+.slide-delay-3 { animation-delay: 0.3s; }
+.slide-delay-4 { animation-delay: 0.4s; }
+.slide-delay-5 { animation-delay: 0.5s; }
+.slide-delay-6 { animation-delay: 0.6s; }
+.slide-delay-7 { animation-delay: 0.7s; }
+.slide-delay-8 { animation-delay: 0.8s; }
+.slide-delay-9 { animation-delay: 0.9s; }
+.slide-delay-10 { animation-delay: 1.0s; }
+
+@keyframes growAndFade {
+  0% {
+    transform: scale(0.1);
+    opacity: 1;
+  }
+  75% {
+    transform: scale(20);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(20);
+    opacity: 0.6;
+  }
+}
+
+.animated-football-logo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  animation: growAndFade 1.0s ease-in-out forwards;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.content-layer {
+  position: relative;
+  z-index: 10;
+}
+
+.winners-feature-card {
+  background: linear-gradient(160deg, #546a7b 0%, #454f57 55%, #393d3f 100%);
+  box-shadow:
+    0 10px 28px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(218, 218, 210, 0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.winners-feature-card:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 14px 36px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(218, 218, 210, 0.18);
+}
