@@ -148,3 +148,26 @@ body {
     0 14px 36px rgba(0, 0, 0, 0.5),
     inset 0 1px 0 rgba(218, 218, 210, 0.18);
 }
+
+/* ---- Welcome page: bouncing ball intro ----
+   The ball's motion is driven by JS physics (components/welcome/BouncingBall.tsx) -
+   gravity, bounce restitution, rolling friction and rotation - rather than a
+   fixed CSS keyframe loop, so it decays naturally left-to-right across the
+   page and comes to rest once, near the bottom edge. These rules just
+   position the stage/ball; the transform (translate + rotate) is written
+   to the element directly per animation frame. */
+.welcome-ball-stage {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.welcome-ball-physics {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90px;
+  height: 90px;
+  will-change: transform;
+}

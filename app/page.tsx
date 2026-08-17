@@ -1,8 +1,7 @@
-// Root landing page now shows the Teams view.
-// The former home page is preserved at /review (see app/review/page.tsx)
-// for end-of-season use.
-import TeamsPage from './teams/page';
+// Root landing page: the Welcome splash (see app/welcome/page.tsx).
+// The Teams grid (the former landing page) remains available at /teams.
+import WelcomePage from './welcome/page';
 
 export default function RootPage() {
-  return <TeamsPage />;
+  return <WelcomePage />;
 }
