@@ -11,8 +11,8 @@ export default function WelcomePage() {
           <span className="text-dt-accent font-bold">Team</span>
           <span className="text-dt-content font-bold">27</span>
         </h1>
-        <p className="text-lg sm:text-xl text-dt-content-muted mb-10">
-          The one team for a season game.
+        <p className="text-lg sm:text-xl text-dt-accent mb-10">
+          The one-team-for-a-season game.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
