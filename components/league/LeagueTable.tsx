@@ -43,8 +43,8 @@ export default function LeagueTable({ managers, lastUpdated }: LeagueTableProps)
         <div className="overflow-hidden rounded-xl bg-[#BFE6CF] p-[3px] shadow-[0_10px_30px_-12px_rgba(0,0,0,0.45)]">
           <div className="relative z-10 overflow-x-auto rounded-lg">
             <div className="bg-white p-4 sm:p-6 rounded-lg max-w-[720px] mx-auto">
-              <div className="bg-[#C8EAD6] rounded-lg px-4 py-2 mb-4">
-                <h3 className="md:text-2xl text-xl font-bold text-[#2E3A40] text-center">League Positions</h3>
+              <div className="bg-dt-surface-2 rounded-lg px-4 py-2 mb-4">
+                <h3 className="md:text-2xl text-xl font-bold text-white text-center">League Positions</h3>
               </div>
               {lastUpdated && (
                 <div className="text-sm text-[#5B6770] mb-4 text-center">
