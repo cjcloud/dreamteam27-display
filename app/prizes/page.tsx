@@ -2,7 +2,24 @@
 
 import { useMemo } from 'react';
 import { Big_Shoulders_Display, Space_Mono } from 'next/font/google';
+import { format } from 'date-fns';
 import { useManagers } from '@/lib/hooks/useManagers';
+
+// Matches the formatting used on /league (app/league/page.tsx) so the two
+// pages show the same "last updated" style rather than a raw timestamp.
+// Handles both an ISO date string and a bare epoch-millisecond string,
+// since /2/0 in Firebase has held either shape at different times.
+const formatLastUpdated = (dateStr: string | null): string | null => {
+  if (!dateStr) return null;
+  try {
+    const isEpochMs = /^\d+$/.test(dateStr.trim());
+    const date = isEpochMs ? new Date(Number(dateStr)) : new Date(dateStr);
+    if (isNaN(date.getTime())) return null;
+    return format(date, "MMM d, yyyy 'at' HH:mm");
+  } catch {
+    return null;
+  }
+};
 
 const bigShoulders = Big_Shoulders_Display({
   subsets: ['latin'],
@@ -27,6 +44,7 @@ const TOTAL_POT = PRIZES.reduce((sum, p) => sum + p.amount, 0);
 
 export default function PrizesPage() {
   const { managers, loading, lastUpdated } = useManagers();
+  const formattedLastUpdated = formatLastUpdated(lastUpdated);
 
   // Current top 4 by league position, sourced live from Firebase via useManagers
   // (the same hook /league uses) â€” no hardcoded names.
@@ -148,7 +166,7 @@ export default function PrizesPage() {
         </div>
 
         <p className="mt-4 text-center text-dt-content-muted text-sm leading-relaxed">
-          Shown above: current league positions{lastUpdated ? ` as of ${lastUpdated}` : ''}. Standings will
+          Shown above: current league positions{formattedLastUpdated ? ` as of ${formattedLastUpdated}` : ''}. Standings will
           move throughout the season &mdash;{' '}
           <strong className="text-dt-content">
             final positions on Gameweek 38 will confirm the prize money.
