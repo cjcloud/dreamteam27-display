@@ -173,14 +173,15 @@ body {
 }
 
 /* ============================================================
-   Season's Prizes page (/prizes) -- floodlit hero, LED ticker,
-   and the prize-box list. Scoped with a `prizes-` prefix so it
-   can't collide with any other page's styles.
-   See app/prizes/page.tsx.
+   Site-wide pitch/turf background -- floodlit stadium backdrop,
+   originally built for the Season's Prizes page below and now
+   applied to every themed page's top-level wrapper (see `pitch-bg`
+   usages across each page.tsx and app/loading.tsx).
+   Not applied to app/playerstatus and app/test-wissa, which are
+   still on the older unthemed light `bg-gray-100` surface -- see
+   PROJECT-STATUS.md for that pre-existing to-do.
 ============================================================ */
-.prizes-page {
-  position: relative;
-  overflow: hidden;
+.pitch-bg {
   background:
     radial-gradient(ellipse 100% 46% at 50% 0%, rgba(67, 97, 238, 0.18), transparent 60%),
     radial-gradient(ellipse 70% 30% at 50% 30%, rgba(199, 249, 0, 0.05), transparent 65%),
@@ -189,6 +190,17 @@ body {
       rgba(12, 34, 28, 0.4) 64px, rgba(12, 34, 28, 0.4) 128px
     ),
     linear-gradient(180deg, #0f1115 0%, var(--dt-bg) 30%, var(--dt-bg) 100%);
+}
+
+/* ============================================================
+   Season's Prizes page (/prizes) -- floodlit hero, LED ticker,
+   and the prize-box list. Scoped with a `prizes-` prefix so it
+   can't collide with any other page's styles.
+   See app/prizes/page.tsx.
+============================================================ */
+.prizes-page {
+  position: relative;
+  overflow: hidden;
 }
 
 .prizes-floodlight {

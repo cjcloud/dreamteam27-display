@@ -55,7 +55,7 @@ export default function PrizesPage() {
 
   return (
     <div
-      className={`${bigShoulders.variable} ${spaceMono.variable} prizes-page relative overflow-hidden bg-dt-bg text-dt-content`}
+      className={`${bigShoulders.variable} ${spaceMono.variable} prizes-page pitch-bg relative overflow-hidden bg-dt-bg text-dt-content`}
     >
       <div className="prizes-floodlight prizes-fl-left" aria-hidden="true" />
       <div className="prizes-floodlight prizes-fl-right" aria-hidden="true" />

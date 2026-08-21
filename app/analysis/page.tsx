@@ -27,7 +27,7 @@ export default function AnalysisPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-onyx p-6">
+      <div className="min-h-screen bg-onyx pitch-bg p-6">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-2xl font-bold text-white mb-4">Analysis - Loading...</h1>
         </div>
@@ -37,7 +37,7 @@ export default function AnalysisPage() {
 
   if (error) {
     return (
-      <div className="min-h-screen bg-onyx p-6">
+      <div className="min-h-screen bg-onyx pitch-bg p-6">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-2xl font-bold text-white mb-4">Analysis - Error</h1>
           <div className="bg-red-900/20 border border-red-500/30 rounded-lg p-4 text-red-300">
@@ -99,7 +99,7 @@ export default function AnalysisPage() {
   });
 
   return (
-    <div className="min-h-screen bg-onyx p-3 sm:p-6">
+    <div className="min-h-screen bg-onyx pitch-bg p-3 sm:p-6">
       <div className="max-w-7xl mx-auto">
         <h1 className="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6">Analysis - Club & Player Data</h1>
         

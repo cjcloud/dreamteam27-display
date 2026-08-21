@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 export default function WinnersPage() {
   return (
-    <div className="min-h-screen bg-onyx p-8 relative">
+    <div className="min-h-screen bg-onyx pitch-bg p-8 relative">
       <Confetti />
 
       <Image
