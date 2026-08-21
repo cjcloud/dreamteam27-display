@@ -173,7 +173,7 @@ body {
 }
 
 /* ============================================================
-   Season's Prizes page (/prizes) â€” floodlit hero, LED ticker,
+   Season's Prizes page (/prizes) -- floodlit hero, LED ticker,
    and the prize-box list. Scoped with a `prizes-` prefix so it
    can't collide with any other page's styles.
    See app/prizes/page.tsx.

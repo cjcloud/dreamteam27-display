@@ -47,7 +47,7 @@ export default function PrizesPage() {
   const formattedLastUpdated = formatLastUpdated(lastUpdated);
 
   // Current top 4 by league position, sourced live from Firebase via useManagers
-  // (the same hook /league uses) â€” no hardcoded names.
+  // (the same hook /league uses) -- no hardcoded names.
   const topFour = useMemo(
     () => [...managers].sort((a, b) => a.currentPosition - b.currentPosition).slice(0, 4),
     [managers]
@@ -170,8 +170,7 @@ export default function PrizesPage() {
           move throughout the season &mdash;{' '}
           <strong className="text-dt-content">
             final positions on Gameweek 38 will confirm the prize money.
-          </strong>{' '}
-          Payout method: <span className="text-dt-primary font-mono">[confirm before deploy]</span>.
+          </strong>
         </p>
       </div>
     </div>
