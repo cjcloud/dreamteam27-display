@@ -74,7 +74,7 @@ export default function TeamsPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-onyx flex items-center justify-center">
+      <div className="min-h-screen bg-onyx pitch-bg flex items-center justify-center">
         <div className="flex flex-col items-center space-y-4">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-tangerine"></div>
           <p className="text-timber text-lg">Loading manager data...</p>
@@ -85,7 +85,7 @@ export default function TeamsPage() {
 
   if (error) {
     return (
-      <div className="min-h-screen bg-onyx flex items-center justify-center">
+      <div className="min-h-screen bg-onyx pitch-bg flex items-center justify-center">
         <div className="text-red-500 text-center">
           <h2 className="text-xl font-bold mb-2">Error</h2>
           <p>{error.message}</p>
@@ -95,7 +95,7 @@ export default function TeamsPage() {
   }
 
   return (
-    <div className="min-h-screen bg-onyx">
+    <div className="min-h-screen bg-onyx pitch-bg">
       <div className="max-w-7xl mx-auto p-4 sm:p-6">
         <header className="mb-6">
           <h1 className="text-2xl font-bold text-white mb-2">Team Overview</h1>

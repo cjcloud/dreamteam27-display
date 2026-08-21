@@ -25,7 +25,7 @@ export default function LeaguePage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-onyx flex items-center justify-center">
+      <div className="min-h-screen bg-onyx pitch-bg flex items-center justify-center">
         <div className="flex flex-col items-center space-y-4">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-tangerine"></div>
           <p className="text-timber text-lg">Loading manager data...</p>
@@ -36,7 +36,7 @@ export default function LeaguePage() {
 
   if (error) {
     return (
-      <div className="min-h-screen bg-onyx flex items-center justify-center">
+      <div className="min-h-screen bg-onyx pitch-bg flex items-center justify-center">
         <div className="text-red-500 text-center">
           <h2 className="text-xl font-bold mb-2">Error</h2>
           <p>{error.message}</p>
@@ -48,7 +48,7 @@ export default function LeaguePage() {
   const formattedDate = formatDate(lastUpdated);
 
   return (
-    <main className="min-h-screen bg-onyx relative">
+    <main className="min-h-screen bg-onyx pitch-bg relative">
       {/* Content */}
       <div className="relative z-10 w-full px-1 py-4 sm:p-4">
         {/* <div className="mb-6 sm:mb-8">

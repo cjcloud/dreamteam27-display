@@ -15,7 +15,7 @@ export default function SeasonReviewPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-onyx p-8">
+      <div className="min-h-screen bg-onyx pitch-bg p-8">
         <div className="animate-pulse">
           <div className="h-8 bg-primary-dark/50 rounded w-48 mb-4"></div>
           <div className="h-4 bg-primary-dark/50 rounded w-96 mb-8"></div>
@@ -26,14 +26,14 @@ export default function SeasonReviewPage() {
 
   if (error) {
     return (
-      <div className="min-h-screen bg-onyx p-8">
+      <div className="min-h-screen bg-onyx pitch-bg p-8">
         <div className="text-red-500">Error: {error.message}</div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-onyx p-8">
+    <div className="min-h-screen bg-onyx pitch-bg p-8">
       <h1 className="text-4xl mb-6 content-layer">
         <span className="text-timber">Dream</span>
         <span className="font-bold text-tangerine">Team</span>

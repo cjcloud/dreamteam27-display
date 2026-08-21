@@ -3,7 +3,7 @@ import BouncingBall from '@/components/welcome/BouncingBall';
 
 export default function WelcomePage() {
   return (
-    <div className="relative min-h-screen overflow-hidden flex flex-col items-center justify-center bg-dt-bg text-center px-4">
+    <div className="relative min-h-screen overflow-hidden flex flex-col items-center justify-center bg-dt-bg pitch-bg text-center px-4">
       <div className="content-layer max-w-2xl mx-auto pb-40 sm:pb-48">
         <h1 className="text-3xl sm:text-5xl mb-4 leading-tight">
           <span className="text-dt-content font-bold">Welcome to </span>
