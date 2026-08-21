@@ -170,8 +170,7 @@ export default function PrizesPage() {
           move throughout the season &mdash;{' '}
           <strong className="text-dt-content">
             final positions on Gameweek 38 will confirm the prize money.
-          </strong>{' '}
-          Payout method: <span className="text-dt-primary font-mono">[confirm before deploy]</span>.
+          </strong>
         </p>
       </div>
     </div>
