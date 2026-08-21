@@ -38,7 +38,7 @@ export default function Navigation() {
           <Link href="/" aria-label="Home" className="flex items-center" onClick={closeMenu}>
             <Logo />
           </Link>
-          
+
           {/* Desktop Navigation */}
           <div className="hidden sm:flex space-x-4">
             <Link
@@ -64,6 +64,14 @@ export default function Navigation() {
               }`}
             >
               Analysis
+            </Link>
+            <Link
+              href="/prizes"
+              className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                isActive('/prizes') ? 'bg-black/30 text-tangerine' : 'text-white hover:bg-black/20 hover:text-tangerine'
+              }`}
+            >
+              Prizes
             </Link>
           </div>
 
@@ -128,6 +136,15 @@ export default function Navigation() {
                 }`}
               >
                 Analysis
+              </Link>
+              <Link
+                href="/prizes"
+                onClick={closeMenu}
+                className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                  isActive('/prizes') ? 'bg-black/30 text-tangerine' : 'text-white hover:bg-black/20 hover:text-tangerine'
+                }`}
+              >
+                Prizes
               </Link>
             </div>
           </div>
