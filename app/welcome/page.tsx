@@ -27,6 +27,12 @@ export default function WelcomePage() {
           >
             League
           </Link>
+          <Link
+            href="/prizes"
+            className="welcome-prizes-btn px-8 py-3 rounded-md bg-dt-bg border-2 border-dt-accent text-dt-accent font-semibold text-lg hover:opacity-90 transition-opacity"
+          >
+            Prizes
+          </Link>
         </div>
       </div>
 

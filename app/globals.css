@@ -412,3 +412,30 @@ body {
     animation: none;
   }
 }
+
+/* ============================================================
+   Welcome page: "Prizes" button dynamic glow. Scoped to
+   .welcome-prizes-btn so it can't collide with any other button.
+   See app/welcome/page.tsx.
+============================================================ */
+.welcome-prizes-btn {
+  position: relative;
+  animation: welcomePrizesGlow 2.4s ease-in-out infinite;
+}
+@keyframes welcomePrizesGlow {
+  0%, 100% {
+    box-shadow: 0 0 6px rgba(199, 249, 0, 0.3), 0 0 16px rgba(199, 249, 0, 0.12);
+    border-color: rgba(199, 249, 0, 0.65);
+  }
+  50% {
+    box-shadow: 0 0 16px rgba(199, 249, 0, 0.85), 0 0 44px rgba(199, 249, 0, 0.45);
+    border-color: rgba(199, 249, 0, 1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .welcome-prizes-btn {
+    animation: none;
+    box-shadow: 0 0 10px rgba(199, 249, 0, 0.4);
+  }
+}
